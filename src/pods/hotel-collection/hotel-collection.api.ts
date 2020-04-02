@@ -1,5 +1,5 @@
-import Axios from 'axios';
-import { baseApiUrl } from '../../core/';
+import Axios from "axios";
+import { baseApiUrl } from "../../core/";
 
 export interface HotelEntityApi {
   id: string;
@@ -45,3 +45,4 @@ const getHotelsUrl = `${baseApiUrl}/api/hotels`;
 // would be a good idea
 export const getHotelCollection = (): Promise<HotelEntityApi[]> =>
   Axios.get<HotelEntityApi[]>(getHotelsUrl).then(({ data }) => data);
+console.log("travis");
